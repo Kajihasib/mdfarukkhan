@@ -8,6 +8,7 @@
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/slick.css" />
+    <link rel="stylesheet" href="assets/css/floating-wpp.min.css" />
     <link rel="stylesheet" href="assets/css/magnific-popup.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
@@ -16,7 +17,7 @@
     <header class="header-area">
       <div class="container">
         <div class="row align-items-center">
-          <div class="col-lg-3 col-6">
+          <div class="col-lg-3 col-5">
             <a href="index.html" class="logo">
               <img src="assets/images/logo.svg" alt="logo" />
             </a>
@@ -38,19 +39,32 @@
               <li>
                 <a href="blog.html">Blog</a>
               </li>
-              <li>
-                <a class="appointment-btn" href="#appointment"
-                  >Need an Appointment</a
+              <li class="d-none d-lg-block">
+                <a
+                  class="appointment-btn"
+                  data-bs-toggle="modal"
+                  href="#contactForm"
+                >
+                  Need an Appointment</a
                 >
               </li>
             </ul>
           </div>
-          <div class="col-6 d-block d-lg-none text-right">
-            <ul class="menu-trigger">
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
+          <div class="col-7 d-block d-lg-none text-right">
+            <div class="apoinment">
+              <a
+                class="appointment-btn"
+                data-bs-toggle="modal"
+                href="#contactForm"
+              >
+                Appointment
+              </a>
+              <ul class="menu-trigger">
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -75,13 +89,13 @@
                 Digital Marketing skills, I can optimize your website content to
                 be more revenue generating.
               </p>
-              <a href="#" class="btn-style">
+              <a data-bs-toggle="modal" href="#contactForm" class="btn-style">
                 <span>Hire Me</span>
                 <img src="assets/images/icons/btn.svg" alt="Hire Me" />
               </a>
             </div>
             <div class="row">
-              <div class="col-xl-6 col-12">
+              <div class="col-md-6 col-12">
                 <div class="featured-wrap">
                   <h3 class="title">Featured By</h3>
                   <ul class="featured-items">
@@ -98,7 +112,7 @@
                   </ul>
                 </div>
               </div>
-              <div class="col-xl-6 col-12">
+              <div class="col-md-6 col-12">
                 <div class="featured-wrap">
                   <h3 class="title">Worked with</h3>
                   <ul class="featured-items">
@@ -282,7 +296,7 @@
               achieving your business goals.
             </p>
             <div class="row">
-              <div class="col-lg-6 col-12">
+              <div class="col-md-6 col-12">
                 <a
                   class="service-wrap popup-video"
                   href="https://www.youtube.com/watch?v=MVCMaNNCOtI"
@@ -299,7 +313,7 @@
                   />
                 </a>
               </div>
-              <div class="col-lg-6 col-12">
+              <div class="col-md-6 col-12">
                 <a
                   class="service-wrap popup-video"
                   href="https://www.youtube.com/watch?v=rUYHynBJLSw"
@@ -371,7 +385,7 @@
                   website.
                 </li>
               </ul>
-              <a href="#" class="btn-style">
+              <a data-bs-toggle="modal" href="#contactForm" class="btn-style">
                 <span>Hire Me</span>
                 <img src="assets/images/icons/btn.svg" alt="Hire Me" />
               </a>
@@ -447,7 +461,7 @@
           </div>
           <div class="col-lg-8 col-12">
             <div class="row">
-              <div class="col-lg-4 col-md-6 col-12">
+              <div class="col-4">
                 <div class="client-wrap">
                   <img
                     src="assets/images/icons/project.svg"
@@ -458,7 +472,7 @@
                   <h4 class="subtitle">Projects</h4>
                 </div>
               </div>
-              <div class="col-lg-4 col-md-6 col-12">
+              <div class="col-4">
                 <div class="client-wrap">
                   <img
                     src="assets/images/icons/students.svg"
@@ -469,7 +483,7 @@
                   <h4 class="subtitle">Students</h4>
                 </div>
               </div>
-              <div class="col-lg-4 col-md-6 col-12">
+              <div class="col-4">
                 <div class="client-wrap">
                   <img
                     src="assets/images/icons/client.svg"
@@ -511,7 +525,7 @@
             </div>
             <div class="accordion">
               <div class="row">
-                <div class="col-md-6 col-12">
+                <div class="col-lg-6 col-12">
                   <div class="hiring-wrap">
                     <span
                       class="collapsed"
@@ -588,7 +602,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-6 col-12">
+                <div class="col-lg-6 col-12">
                   <div class="hiring-wrap">
                     <span
                       class="collapsed"
@@ -690,7 +704,7 @@
               <img class="play" src="assets/images/icons/play.svg" alt="play" />
             </a>
             <div class="text-center mt-5">
-              <a href="#" class="btn-style">
+              <a data-bs-toggle="modal" href="#contactForm" class="btn-style">
                 <span>Hire Me</span>
                 <img src="assets/images/icons/btn.svg" alt="Hire Me" />
               </a>
@@ -1215,13 +1229,143 @@
         </div>
       </div>
     </footer>
+
+    <div
+      class="modal fade contact-modal"
+      id="contactForm"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <h2 class="modal-title">
+            <span class="title">
+              <img src="assets/images/icons/contact.svg" alt="contact" />
+              Contact With Me
+            </span>
+            <span class="modal-close">
+              <img
+                data-bs-dismiss="modal"
+                src="assets/images/close.svg"
+                alt="close"
+              />
+            </span>
+          </h2>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6 col-12 col-xl-5">
+                <div class="contact-img">
+                  <img src="assets/images/contact.webp" alt="contact" />
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-7 col-12">
+                <form id="contact_form">
+                  <div class="row">
+                    <div class="col-md-6 col-12">
+                      <div class="input-style">
+                        <label for="name">YOUR NAME</label>
+                        <input
+                          type="text"
+                          placeholder="Name"
+                          id="name"
+                          name="name"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-12">
+                      <div class="input-style">
+                        <label for="email">YOUR Email</label>
+                        <input
+                          type="email"
+                          placeholder="Email"
+                          id="email"
+                          name="email"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-12">
+                      <div class="input-style">
+                        <label for="phone">Phone</label>
+                        <input
+                          type="tel"
+                          placeholder="Phone"
+                          id="phone"
+                          name="phone"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-12">
+                      <div class="input-style">
+                        <label for="website">Website</label>
+                        <input
+                          type="url"
+                          placeholder="Url"
+                          id="website"
+                          name="website"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="input-style">
+                    <label for="message">Message</label>
+                    <textarea
+                      name="message"
+                      id="message"
+                      cols="30"
+                      rows="10"
+                      placeholder="Message"
+                    ></textarea>
+                  </div>
+                  <button class="submit-btn">
+                    Send message
+                    <svg
+                      width="22"
+                      height="22"
+                      viewBox="0 0 22 22"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M4.79688 11.0786H16.9966"
+                        stroke="white"
+                        stroke-width="1.74281"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M10.897 4.97852L16.9968 11.0784L10.897 17.1782"
+                        stroke="white"
+                        stroke-width="1.74281"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="myWhatsapp"></div>
+
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/slick.min.js"></script>
     <script src="assets/js/typed.min.js"></script>
+    <script src="assets/js/floating-wpp.min.js"></script>
+    <script src="assets/js/jquery.validate.min.js"></script>
     <script src="assets/js/magnific-popup.min.js"></script>
     <script src="assets/js/script.js"></script>
     <script>
+      $("#myWhatsapp").floatingWhatsApp({
+        phone: "+8801924529876",
+        popupMessage: "Hello, how can we help you?",
+        showPopup: true,
+        position: "right",
+        zIndex: 15,
+      });
       $(function () {
         $(".hero-wrap .title").typed({
           strings: [
@@ -1315,6 +1459,34 @@
         preloader: false,
 
         fixedContentPos: false,
+      });
+
+      $("#contact_form").validate({
+        errorElement: "span",
+        errorClass: "error-message",
+        rules: {
+          phone: "required",
+          name: "required",
+          message: "required",
+          website: {
+            required: true,
+            url: true,
+          },
+          email: {
+            required: true,
+            email: true,
+          },
+        },
+        messages: {
+          phone: "Phone can not be empty",
+          email: "Email can not be empty",
+          name: "Full Name can not be empty",
+          message: "Message can not be empty",
+          website: {
+            required: "Url can not be empty",
+            url: "Url must be valid url",
+          },
+        },
       });
     </script>
   </body>
