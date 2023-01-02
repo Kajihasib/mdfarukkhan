@@ -1,9 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600&display=swap");
 
 $titleColor: #000;
 $themeColor: #0099ff;
 $textColor: #6a6a6a;
-$titleFonts: "Poppins", sans-serif;
+$titleFonts: "Montserrat", sans-serif;
 body {
   font-size: 16px;
   line-height: 25px;
@@ -76,8 +76,13 @@ body {
     a {
       &:not(.appointment-btn) {
         display: inline-block;
-        font-size: 18px;
-        color: rgba(0, 0, 0, 0.58);
+        font-size: 16px;
+        color: $titleColor;
+        font-weight: 500;
+        &:hover,
+        &.active {
+          color: $themeColor;
+        }
       }
     }
     &:last-child {
@@ -156,7 +161,7 @@ body {
     padding: 5px 15px;
     letter-spacing: 0.03em;
     font-weight: 600;
-    font-size: 30px;
+    font-size: 28px;
     color: #fff;
     line-height: 30px;
     margin: 0;
@@ -208,12 +213,18 @@ body {
     object-fit: cover;
   }
 }
+.featured-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  .featured-wrap {
+    margin-right: 15px;
+  }
+}
 .featured-wrap {
   background: #e0f3ff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
   padding: 10px;
-  display: inline-block;
   margin-top: 35px;
   @media (max-width: 1200px) {
     margin-top: 30px;
@@ -221,7 +232,7 @@ body {
   .title {
     text-transform: uppercase;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 16px;
     color: #2163a9;
     margin-bottom: 5px;
   }
@@ -231,6 +242,16 @@ body {
   align-items: center;
   li {
     margin-right: 8px;
+    a {
+      display: block;
+      img {
+        width: 100px;
+        height: 65px;
+        object-fit: contain;
+        border: 1px solid $themeColor;
+        padding: 5px;
+      }
+    }
     &:last-child {
       margin-right: 0;
     }
@@ -593,13 +614,12 @@ body {
   background: #0469bc;
   padding: 20px 0px;
   @media (max-width: 991px) {
-    padding: 50px 0px;
+    padding: 20px 0px 50px;
   }
-  img {
+  .client-img {
     @media (max-width: 991px) {
-      &:not(.icon) {
-        display: none;
-      }
+      text-align: center;
+      margin-bottom: 20px;
     }
   }
 }
