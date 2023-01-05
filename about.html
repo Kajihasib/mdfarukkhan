@@ -582,99 +582,10 @@
         position: "right",
         zIndex: 15,
       });
-      $(function () {
-        $(".hero-wrap .title").typed({
-          strings: [
-            "White Hat SEO Expert in Bangladesh",
-            "Best SEO Expert in Bangladesh",
-            "Organic SEO Expert in Bangladesh",
-          ],
-          typeSpeed: 50,
-          loop: true,
-          backDelay: 700,
-          showCursor: false,
-        });
-      });
-      $(".brand-active").slick({
-        dots: false,
-        infinite: true,
-        speed: 300,
-        slidesToShow: 5,
-        slidesToScroll: 5,
-        arrows: true,
-        prevArrow:
-          '<span class="arrow prev-arrow"><img src="assets/images/icons/prev.svg" alt="prev"></span>',
-        nextArrow:
-          '<span class="arrow next-arrow"><img src="assets/images/icons/next.svg" alt="next"> </span>',
-        responsive: [
-          {
-            breakpoint: 1024,
-            settings: {
-              slidesToShow: 4,
-              slidesToScroll: 4,
-              infinite: true,
-            },
-          },
-          {
-            breakpoint: 600,
-            settings: {
-              slidesToShow: 3,
-              slidesToScroll: 3,
-            },
-          },
-          {
-            breakpoint: 480,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 2,
-            },
-          },
-        ],
-      });
-      $(".testmonial-active").slick({
-        dots: true,
-        infinite: true,
-        speed: 300,
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        arrows: false,
-        prevArrow:
-          '<span class="arrow prev-arrow"><img src="assets/images/icons/prev.svg" alt="prev"></span>',
-        nextArrow:
-          '<span class="arrow next-arrow"><img src="assets/images/icons/next.svg" alt="next"> </span>',
-        responsive: [
-          {
-            breakpoint: 1024,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 2,
-              infinite: true,
-            },
-          },
-          {
-            breakpoint: 600,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
-            },
-          },
-          {
-            breakpoint: 480,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
-            },
-          },
-        ],
-      });
+
       $(".popup-video").magnificPopup({
-        disableOn: 700,
         type: "iframe",
         mainClass: "mfp-fade",
-        removalDelay: 160,
-        preloader: false,
-
-        fixedContentPos: false,
       });
 
       $("#contact_form").validate({
